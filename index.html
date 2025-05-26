@@ -4,106 +4,191 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>مظلات وسواتر السبيعي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Cairo', sans-serif;
+    }
+
     body {
-      font-family: 'Tahoma', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f4f4f4;
+      background: #f9f9f9;
       color: #333;
     }
+
     header {
-      background-color: #222;
-      color: #fff;
+      background-color: #2c3e50;
+      color: white;
       padding: 20px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
+
     header h1 {
       margin: 0;
-      font-size: 28px;
+      font-size: 26px;
     }
-    section {
-      padding: 20px;
-      max-width: 700px;
-      margin: auto;
-      background: white;
-      margin-top: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #ccc;
-    }
-    .button {
-      display: inline-block;
-      background-color: #27ae60;
+
+    .hero {
+      background-image: url("https://i.imgur.com/1V0uvFp.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: white;
-      padding: 12px 20px;
-      text-decoration: none;
+      text-shadow: 1px 1px 5px black;
+    }
+
+    .hero h2 {
+      font-size: 30px;
+      background: rgba(0,0,0,0.4);
+      padding: 10px 20px;
       border-radius: 6px;
-      margin-top: 10px;
     }
+
+    .section {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .service-box {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ddd;
+      text-align: center;
+    }
+
+    .service-box img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
     form {
-      margin-top: 20px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ddd;
     }
+
     input, textarea {
       width: 100%;
       padding: 10px;
       margin-top: 10px;
-      border-radius: 6px;
+      margin-bottom: 15px;
       border: 1px solid #ccc;
+      border-radius: 6px;
       font-size: 16px;
     }
+
     button {
       background-color: #2980b9;
       color: white;
       border: none;
       padding: 12px 20px;
-      margin-top: 10px;
-      border-radius: 6px;
       font-size: 16px;
+      border-radius: 6px;
       cursor: pointer;
+      width: 100%;
     }
+
     footer {
       text-align: center;
       padding: 15px;
-      background-color: #eee;
-      margin-top: 40px;
       font-size: 14px;
+      background: #eee;
+      margin-top: 30px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    @media(max-width: 600px) {
+      .hero h2 {
+        font-size: 22px;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>مظلات وسواتر السبيعي</h1>
-    <p>0501262353 - الرياض</p>
+    <h1>مظلات وسواتر السبيعي - الرياض</h1>
+    <p>اتصل بنا الآن: 0501262353</p>
   </header>
 
-  <section>
-    <h2>خدماتنا</h2>
-    <p>
-      نوفر جميع أنواع المظلات والسواتر بأعلى جودة وأفضل الأسعار داخل الرياض. تركيب، صيانة، وتفصيل حسب الطلب.
-    </p>
-    <a class="button" href="https://wa.me/966501262353" target="_blank">اتصل الآن عبر واتساب</a>
-  </section>
+  <div class="hero">
+    <h2>أفضل أنواع المظلات والسواتر في الرياض</h2>
+  </div>
 
-  <section>
-    <h2>نموذج التواصل</h2>
+  <div class="section">
+    <h3>خدماتنا</h3>
+    <div class="services">
+      <div class="service-box">
+        <img src="https://i.imgur.com/OxF1bMC.jpg" alt="مظلات سيارات">
+        <h4>مظلات سيارات</h4>
+        <p>نوفر مظلات عالية الجودة مقاومة للحرارة والأمطار.</p>
+      </div>
+      <div class="service-box">
+        <img src="https://i.imgur.com/jBObSjl.jpg" alt="سواتر حوش">
+        <h4>سواتر حوش</h4>
+        <p>سواتر فخمة للخصوصية والحماية بأسعار منافسة.</p>
+      </div>
+      <div class="service-box">
+        <img src="https://i.imgur.com/JXlLix9.jpg" alt="تفصيل حسب الطلب">
+        <h4>تفصيل حسب الطلب</h4>
+        <p>نركب ونفصل لك حسب احتياجك بأي مقاس ونوع.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>نموذج التواصل</h3>
     <form>
-      <label>الاسم:</label>
-      <input type="text" placeholder="اكتب اسمك" required />
-
-      <label>رقم الجوال:</label>
-      <input type="tel" placeholder="05xxxxxxxx" required />
-
-      <label>رسالتك:</label>
-      <textarea rows="4" placeholder="اكتب تفاصيل طلبك هنا..." required></textarea>
-
+      <input type="text" placeholder="اسمك" required>
+      <input type="tel" placeholder="رقم الجوال" required>
+      <textarea rows="4" placeholder="اكتب طلبك أو استفسارك" required></textarea>
       <button type="submit">إرسال</button>
     </form>
-  </section>
+  </div>
 
   <footer>
-    &copy; 2025 مظلات وسواتر السبيعي – جميع الحقوق محفوظة
+    &copy; 2025 مظلات وسواتر السبيعي - جميع الحقوق محفوظة
   </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/966501262353" target="_blank">
+    واتساب مباشر
+  </a>
 
 </body>
 </html>
